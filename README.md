@@ -91,7 +91,7 @@ ou use um plugin como o Live Server para rodar em http://localhost:5500;
 
 
 🗂 Estrutura do Projeto
-
+```bash
 despesas-pessoais/
 ├── backend/            # Configurações do Django
 │   ├── settings.py
@@ -107,9 +107,14 @@ despesas-pessoais/
 ├── manage.py
 ├── requirements.txt
 └── render.yaml         # Configuração do deploy automático no Render
+```
+
+
 
 
 
 Desenvolvido por: Paulo Eduardo Cunha
+
 Disciplina: Desenvolvimento Web - 4º Prova
+
 Docente: Raul Benites Paradeda

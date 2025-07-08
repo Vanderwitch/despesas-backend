@@ -3,7 +3,7 @@ services:
     name: despesas-backend
     env: python
     buildCommand: "pip install -r requirements.txt"
-    startCommand: gunicorn backend.wsgi:application
+    startCommand: "./entrypoint.sh"
     envVars:
       - key: DJANGO_SETTINGS_MODULE
         value: backend.settings

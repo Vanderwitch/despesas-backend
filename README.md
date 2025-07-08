@@ -6,6 +6,7 @@ Este projeto é uma aplicação web para registrar, consultar, editar e excluir 
 
 ## 🚀 Deploy
 
+- 🔗 **Página do GitHub**: [https://github.com/Vanderwitch/despesas-pessoais]
 - 🔗 **Aplicação online**: [https://despesas-pessoais-uern.netlify.app/]
 - 🔗 **API (back-end)**: [https://despesas-backend-o37s.onrender.com/api/expenses/]
 - 📹 **Vídeo demonstrativo**: [https://link-do-video.com]
@@ -44,7 +45,7 @@ Este projeto é uma aplicação web para registrar, consultar, editar e excluir 
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/Vanderwitch/despesas-backend
+   git clone https://github.com/Vanderwitch/despesas-pessoais
    cd seu-repositorio
 
 2. Crie e ative o ambiente virtual:

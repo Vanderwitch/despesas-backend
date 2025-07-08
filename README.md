@@ -6,11 +6,9 @@ Este projeto é uma aplicação web para registrar, consultar, editar e excluir 
 
 ## 🚀 Deploy
 
-- 🔗 **Aplicação online**: [https://despesas-frontend-url.vercel.app](https://despesas-frontend-url.vercel.app)  
-- 🔗 **API (back-end)**: [https://despesas-backend-o37s.onrender.com/api/expenses/](https://despesas-backend-o37s.onrender.com/api/expenses/)  
-- 📹 **Vídeo demonstrativo**: [https://link-do-video.com](https://link-do-video.com)
-
-> *(Substitua os links acima pelos seus reais, caso ainda não tenha hospedado o front ou enviado o vídeo)*
+- 🔗 **Aplicação online**: [https://despesas-pessoais-uern.netlify.app/]
+- 🔗 **API (back-end)**: [https://despesas-backend-o37s.onrender.com/api/expenses/]
+- 📹 **Vídeo demonstrativo**: [https://link-do-video.com]
 
 ---
 
@@ -50,21 +48,21 @@ Este projeto é uma aplicação web para registrar, consultar, editar e excluir 
    cd seu-repositorio
 
 2. Crie e ative o ambiente virtual:
-
+    ```bash
     python -m venv venv
-    venv\Scripts\activate  # no Windows
+    .\venv\Scripts\Activate.ps1  # no Windows
     source venv/bin/activate  # no Linux/Mac
 
 3. Instale as dependências:
-
+    ```bash
     pip install -r requirements.txt
     
 4.  Rode as migrações:
-
+    ```bash
     python manage.py migrate
 
 5. Inicie o servidor:
-
+    ```bash
     python manage.py runserver
 
 6. Abra index.html no navegador (está na pasta frontend/)

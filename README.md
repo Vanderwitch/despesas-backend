@@ -9,7 +9,7 @@ Este projeto é uma aplicação web para registrar, consultar, editar e excluir 
 - 🔗 **Página do GitHub**: [https://github.com/Vanderwitch/despesas-pessoais]
 - 🔗 **Aplicação online**: [https://despesas-pessoais-uern.netlify.app/]
 - 🔗 **API (back-end)**: [https://despesas-backend-o37s.onrender.com/api/expenses/]
-- 📹 **Vídeo demonstrativo**: [https://link-do-video.com]
+- 📹 **Vídeo demonstrativo**: [https://drive.google.com/file/d/1DFoT7kDxf8eE8Am2TNXiAAGL_IiXQHpw/view?usp=sharing]
 
 ---
 

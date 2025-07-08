@@ -27,16 +27,17 @@ async function carregarDespesas(categoria = '') {
 
 form.onsubmit = async (e) => {
   e.preventDefault();
+
   const valor = parseFloat(document.getElementById('valor').value);
   const descricao = document.getElementById('descricao').value;
   const categoria = document.getElementById('categoria').value;
-
   const data = { valor, descricao, categoria };
 
   try {
     let res;
+
     if (editingId) {
-      res = await fetch(API_URL + editingId + '/', {
+      res = await fetch(`${API_URL}${editingId}/`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
@@ -51,9 +52,9 @@ form.onsubmit = async (e) => {
     }
 
     if (!res.ok) {
-      const erro = await res.json();
-      console.error("Erro ao enviar:", erro);
-      alert("Erro ao adicionar despesa: " + JSON.stringify(erro));
+      const text = await res.text();
+      console.error("Erro ao salvar:", text);
+      alert("Erro ao salvar despesa. Verifique os campos.");
       return;
     }
 
@@ -64,6 +65,7 @@ form.onsubmit = async (e) => {
     alert("Erro inesperado ao conectar à API.");
   }
 };
+
 
 
 function editarDespesa(id, valor, descricao, categoria) {

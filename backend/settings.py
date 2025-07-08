@@ -39,10 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'corsheaders',
     'expenses',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',  # depois do corsheaders
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -126,3 +129,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 import os
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+CORS_ALLOW_ALL_ORIGINS = True

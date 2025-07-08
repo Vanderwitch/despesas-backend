@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:8000/api/expenses/';
+const API_URL = 'https://despesas-backend-vrcw.onrender.com/api/expenses/';
 const lista = document.getElementById('lista-despesas');
 const form = document.getElementById('expense-form');
 const filtro = document.getElementById('filtro-categoria');
@@ -33,24 +33,38 @@ form.onsubmit = async (e) => {
 
   const data = { valor, descricao, categoria };
 
-  if (editingId) {
-    await fetch(API_URL + editingId + '/', {
-      method: 'PUT',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
-    });
-    editingId = null;
-  } else {
-    await fetch(API_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
-    });
-  }
+  try {
+    let res;
+    if (editingId) {
+      res = await fetch(API_URL + editingId + '/', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      editingId = null;
+    } else {
+      res = await fetch(API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+    }
 
-  form.reset();
-  carregarDespesas(filtro.value);
+    if (!res.ok) {
+      const erro = await res.json();
+      console.error("Erro ao enviar:", erro);
+      alert("Erro ao adicionar despesa: " + JSON.stringify(erro));
+      return;
+    }
+
+    form.reset();
+    carregarDespesas(filtro.value);
+  } catch (err) {
+    console.error("Erro geral:", err);
+    alert("Erro inesperado ao conectar à API.");
+  }
 };
+
 
 function editarDespesa(id, valor, descricao, categoria) {
   document.getElementById('valor').value = valor;

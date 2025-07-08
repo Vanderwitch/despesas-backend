@@ -27,7 +27,7 @@ async function carregarDespesas(categoria = '') {
 
 form.onsubmit = async (e) => {
   e.preventDefault();
-  const valor = document.getElementById('valor').value;
+  const valor = parseFloat(document.getElementById('valor').value);
   const descricao = document.getElementById('descricao').value;
   const categoria = document.getElementById('categoria').value;
 

@@ -1,4 +1,4 @@
-const API_URL = 'https://despesas-backend-o37s.onrender.com/api';
+const API_URL = 'https://despesas-backend-o37s.onrender.com/api/';
 const lista = document.getElementById('lista-despesas');
 const form = document.getElementById('expense-form');
 const filtro = document.getElementById('filtro-categoria');
